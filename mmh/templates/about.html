@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>About me</h2>
+
+<p>Hi, I'm Mark, and this is my blog. 
+I am currently a student at the University of Wisconsin Madison pursuing a Masters in Environmental Studies, focusing on remote sensing classification algorithms. 
+But that's not what this blog is about.</p>
+<p>This blog is about all the other stuff I'm interested in. 
+More specifically, it is mainly based around web development with some of my thoughts on other things sprinkled in. Of these other things, ultimate frisbee, backpacking, and Engineers Without Borders are the most likely topics.</p>
+
+<h2>My goals for this blog</h2>
+<ol>
+<li>Share useful information. As a web developer, I often encounter challenges that take a surprising amount of time to overcome. However, the amount of time has been cut down drastically thanks to the countless other bloggers out there sharing very helpful posts. If I discover something that that would be useful to others, it would be a shame to not share it with the world. </li>
+<li>Have a platform to talk about random things when I want. There are an estimated 100+ million blogs on the internet so it looks like I'm not the only one with this desire!</li>
+<li>Put a face to the sites I write. I'm sure most of you out there would like to know who is producing the content you are consuming.</li>
+</ol>
+
+
+<h2>I should probably mention research too</h2>
+Although this typically takes up more time than any of the previous activities, its not quite as fun to talk about. I am in a 2 year masters degree program in the <a href="http://www.sage.wisc.edu/">Center for Sustainability and the Global Environment</a> and my research revolves around satellite image processing. My focus is on creating crop type classification algorithms that utilize multiple satellites of varying spatial and temporal frequencies. This department is very interdisciplinary and thus my research allows me to use my computer science background every day.
+
+{% endblock %}
+
+{% block right-sidebar %}
+    <div class="image-block"><img src="../../../../media/images/mark_liu.jpg" alt="Profile Picture" /></div>
+    {{ block.super }}
+{% endblock %}
+

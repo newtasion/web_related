@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{% block title %}Maimaihai{% endblock %}</title>
+
+    <link rel="stylesheet" href="/media/css/custom.css" type="text/css" media="screen, projection">	
+    <link rel="stylesheet" href="/media/css/blueprint/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="/media/css/blueprint/print.css" type="text/css" media="print">	
+    <!--[if lt IE 8]><link rel="stylesheet" href="/media/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+    <link rel="alternate" type="application/atom+xml" title="Latest Entries" href="/feeds/latest/" />
+    {% load google_webmaster_tags %}
+    {% webmaster_meta_tag %}
+    {% block extra-css %}{% endblock %}
+</head>
+<body class="{% block bodyclass %}{% endblock %}">
+    <!-- Google Analytics Code -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-16611387-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <div class="header-container">
+        <div class="container">
+            <div id="header" class="span-24 last">
+				<div class="span-12">
+					<img src = "/media/images/logo.gif">
+				</div>
+				
+				<div class="span-12 last">
+					<div id="menu" >
+					 <ul>
+						<li><a href="{% url coltrane_entry_archive_index %}">首页</a></li>
+						<li class="menuDiv"></li>
+						<li><a href="{% url coltrane_link_archive_index %}">教程</a></li>
+						<li class="menuDiv"></li>
+						<li><a href="/about/">关于</a></li>
+					 </ul>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="span-20">
+            <div id="content">
+                {% block content %}
+                {% endblock %}
+            </div>
+            <div id="comments">
+                {% block comments %}
+                {% endblock %}
+            </div>
+        </div>
+        <div id="right-sidebar" class="span-4 last">
+            {% block right-sidebar %}
+            {% endblock %}
+        </div>
+    </div>
+    <div class="footer-container-1">
+        <div class="container">
+            <div id="footer-1" class="span-24 last">
+                <div class="footer-block span-18">
+                    <p>Term of Use:This site does not guarantee the accuracy of links, coupons, or deals on this site. Our site does not responsible for any products ordered from our affiliated or non affiliated merchants. Before participating in any deal, please read the fine print associated with each offer.   
+                </div>
+                <div class="footer-block span-6 last">
+                    <p>重要教程：建设中...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
+    <div class="footer-container-2">
+        <div class="container">
+            <div id="footer-2" class="span-24 last">
+            </div>
+        </div>
+    </div>
+    -->
+</body>
+</html>
